@@ -23,188 +23,107 @@
             </header>
 
             <div class="w3-container">
-                <h1>Samson Crawford Art Gallery</h1>
+                <h1>Art Gallery</h1>
             </div>
-            
-            <section class="w3-container ">
-               
-            </section>
-                
-            <section class="w3-container"> <!-- w3-container adds 16 pixels of padding around each element -->
-                <br>
-                <h3>Introduction</h3>
-                <p>My artwork here in the gallery are all assignments that were done this semester for my Illustration and Raster & Vector Graphics classes.</p>
-            
-            </section>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.container {
+  position: relative;
+  width: 25%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #002843;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <img src="assets/artwork7_satellite_robot.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello!</div>
+  </div>
+</div>
+
+<style>
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="scroll-container">
+  <img src="assets/artwork1_nasa_robot.png" alt="Cinque Terre" width="400" height="470">
+  <img src="assets/artwork2_angel_robot.png" alt="Forest" width="400" height="470">
+  <img src="assets/artwork3_mspaint_robot.png" alt="Northern Lights" width="400" height="470">
+  <img src="assets/artwork4_graphic_design_paramore.png" alt="Mountains" width="400" height="470">
+  <img src="assets/artwork 5_floral_skeletal.jpg" alt="Mountains" width="400" height="470">
+  <img src="assets/artwork6_horror_doctor.png" alt="Mountains" width="400" height="470">
+</div>
+         
+
+                   
+             
         
-            <section class="w3-row row-color-1"> <!-- In this row, we  have the w3-row class only, which defines 
-                a padding-less container. Without the w3-container property, you don't get padding 
-                between the elements. -->
-                
-                <!-- <article class="w3-col s12 m4 l4">
-                    <h4>Photon</h4>
-                    <p><img src="assets/artwork1.png" alt="Illustration of a quantum robot"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4><a title="mantis">Iris</a></h4>
-                    <p><a href="assets/artwork2.png"><img src="assets/artwork2.png" alt="Illustration of an angelic robot"></a></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4>EDEN</h4>
-                    <p><img src="assets/artwork3.png" alt="Illustration of an MS paint robot"></p>
-                </article> -->
-                <!-- Container for the image gallery -->
-                    <div class="container">
-
-                    <!-- Full-width images with number text -->
-                        <div class="mySlides">
-                        <div class="numbertext">1 / 6</div>
-                        <img src="assets/img_woods_wide.jpg" style="width:100%">
-                        </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">2 / 6</div>
-                        <img src="assets/img_5terre_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">3 / 6</div>
-                        <img src="assets/img_mountains_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">4 / 6</div>
-                        <img src="assets/img_lights_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">5 / 6</div>
-                        <img src="assets/img_nature_wide.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">6 / 6</div>
-                        <img src="assets/img_snow_wide.jpg" style="width:100%">
-                    </div>
-
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                    <!-- Image text -->
-                    <div class="caption-container">
-                        <p id="caption"></p>
-                    </div>
-
-                    <!-- Thumbnail images -->
-                        <div class="row">
-                        <div class="column">
-                        <img class="demo cursor" src="assets/img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                        </div>
-                        <div class="column">
-                            <img class="demo cursor" src="assets/img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-                        </div>
-                        <div class="column">
-                        <img class="demo cursor" src="assets/img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                        </div>
-                        <div class="column">
-                        <img class="demo cursor" src="assets/img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                        </div>
-                        <div class="column">
-                        <img class="demo cursor" src="assets/img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-                        </div>
-                        <div class="column">
-                        <img class="demo cursor" src="assets/img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-                        </div>
-                    </div>
-                    </div>
 
 
-            </section> 
+                  
+                    
+
         
-            <section class="w3-container"> 
-                <br> 
-                <h3>Origin</h3>
-                <p>I haven't thought of names for these characters until I was instructed to name the images for this assignment.</p>
-                 
-            </section>
+        
 
-            <section class="w3-container w3-row row-color-1"> <!-- While the w3-row class defines a padding-less 
-                container, when you also have w3-container, it adds 16-pixel padding around the 
-                entire row, but not between the contained elements -->
-                <article class="w3-col s12 m4 l4">
-                    <h4>Photon</h4>
-                    <p><img src="assets/artwork1.png" alt="Illustration of a quantum robot"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4><a title="mantis">Iris</a></h4>
-                    <p><a href="assets/artwork2.png"><img src="assets/artwork2.png" alt="Illustration of an angelic robot"></a></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4>EDEN</h4>
-                    <p><img src="assets/artwork3.png" alt="Illustration of an MS paint robot"></p>
-                </article>
-            </section>
-    
-            <section class="w3-container">
-                <br>
-                <h3>When I began drawing</h3>
-                <p>I started drawing in 2019 pre-COVID, most of those drawings have not been preserved but I do have newer works that I find more presentable.</p>
-            </section>
-
-            <section class="w3-row-padding row-color-1"> <!-- The w3-row-padding class adds 8 pixels of padding around each element.  -->
-                
-                <article class="w3-col s12 m4 l4">
-                    <h4>Photon</h4>
-                    <p><img src="assets/artwork1.png" alt="Illustration of a quantum robot"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4><a title="mantis">Iris</a></h4>
-                    <p><a href="assets/artwork2.png"><img src="assets/artwork2.png" alt="Illustration of an angelic robot"></a></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4>EDEN</h4>
-                    <p><img src="assets/artwork3.png" alt="Illustration of an MS paint robot"></p>
-                </article>
-            </section>
-
-            <section class="w3-container">
-                <br>
-                <h3>Inspired</h3>
-                <p>I've been through an art block before, my professors helped me break out of it this semester and I could not have been happier.</p>
-            </section>
-
-            <section class="w3-row-padding row-color-1">
-                
-                <article class="w3-col s12 m4 l4">
-                    <h4>Photon</h4>
-                    <p><img src="assets/artwork1.png" alt="Illustration of a quantum robot"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4>Iris</h4>
-                    <p><img src="assets/artwork2.png" alt="Illustration of an angelic robot"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4>EDEN</h4>
-                    <p><img src="assets/artwork3.png" alt="Illustration of an MS paint robot"></p>
-                </article>
-                    <article class="w3-col s12 m4 l4">
-                    <h4>Brand New Eyes</h4>
-                    <p><img src="assets/artwork4.png" alt="Vector graphic design of a Paramore album cover"></p>
-                </article>
-                <article class="w3-col s12 m4 l4">
-                    <h4>Compassion</h4>
-                    <p><img src="assets/Crawford_Samson_Editorial_Illustration.jpg" alt="Illustration of giving a person life through an act of kindness."></p>
-                </article>
-            </section>
-                
-            <section class="w3-container">
+         
                
-            </section>  
-
+            
             <footer>
                 <p>&copy; Copyright 2026</p>
             </footer>
+        
         </div>
         <script>let slideIndex = 1;
 showSlides(slideIndex);
@@ -238,22 +157,6 @@ function showSlides(n) {
 }</script>
 
 
-
-
-<script>
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-})
-
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}))
-</script>
 
 	</body>
 </html>
